@@ -1,0 +1,661 @@
+@font-face {
+    font-family: FuturaLT;
+    src: url("Fonts/futura\ light\ bt.ttf");
+}
+@font-face {
+    font-family: FuturaBK;
+    src: url("Fonts/Futura\ Heavy\ font.ttf");
+}
+*{
+    font-family: FuturaLT;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(to bottom, white, #f7f7f7);
+}
+p{
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+}
+section{
+    height: 100%;
+    display: flex;
+    max-width: 85%;
+    margin: auto;  
+}
+h1{
+    font-family: FuturaBK;
+    font-weight: bolder;
+    color: #0030b5;
+}
+/* MENU */
+header{
+    position: relative;
+    max-width: 92%;
+    margin: auto;
+}
+header nav{
+    position: absolute;
+    width: 100%;
+    height: 20vh;   
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+header nav .logoMenu{
+    display: flex;
+    align-items: center;
+}
+header nav .logoMenu h6{
+    color: #4d4d4d;
+    font-size: 18px; 
+    font-family: futuraBK;
+    font-weight: bolder;
+    margin: 0;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+header nav li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    padding: 0px 20px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    font-family: futuraBK;
+    font-weight: bolder;
+}
+header nav ul li a:hover{
+    color: black;
+}
+#seta{
+    position: fixed;
+    left: 95%;
+    top: 95%;
+    color: #6a67ef;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+}
+.navCelular{
+    display: none;
+}
+/* Banner */    
+.bannerHome{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.bannerHome div h1{
+    font-family: FuturaBK;
+    font-weight: bolder;
+    font-size: 6em;
+    line-height: 0.95;
+    color:black;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+.bannerHome svg{
+    position: absolute;
+    z-index: -10000;
+    top: 0;
+    left: 0;   
+}
+/* SOBRE */
+.sectionSobre{
+    height: 100%;
+}
+.sectionSobre .contentSobre{
+    display: flex;
+    margin: 80px 0px;
+    justify-content: space-between;
+}
+.sectionSobre .contentSobre article{
+    max-width: 50%;
+}
+.sectionSobre .contentSobre div{
+    width: 100%; 
+    max-width: 50%;
+    background: url("../../Imagens/yuriFlat.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+/* TRABALHOS */
+.sectionTrabalhos{
+    height: 100%;
+}
+.sectionTrabalhos nav ul{
+    display: flex;
+    flex-flow: row-reverse;
+    margin: 20px 0;
+}
+.sectionTrabalhos nav ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+.sectionTrabalhos nav ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #6a67ef;
+    font-size: 18px;
+    font-family: futuraBK;
+    font-weight: bolder;
+    border: 1.5px solid #6a67ef;
+}
+.sectionTrabalhos nav ul li a.ativado{
+    color: white;   
+    background-color: #6a67ef;
+}
+.sectionTrabalhos nav ul li a:hover{
+    color: white;
+    background-color: #6a67ef;
+    transition: 0.25s ease-in-out;
+}
+.sectionTrabalhos .trabGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-areas: "a a b" "c d d" "e e f";
+    margin: 40px 0;
+}
+.sectionTrabalhos .trabGrid div{
+    width:100%;
+    height: 15em;
+    background: #f1f1f1;
+    box-shadow: 0  5px 10px rgba(154,160,185,0.05),
+    0 15px 40px rgba(166,173,201,0.2);
+    position: relative;
+}
+
+/* TRABALHO DESENVOLVIMENTO */
+.sectionTrabalhos #byDesenvolvimento .trabGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-areas: "a a b" "c d d" "e e f" "g h h";
+    margin: 40px 0;
+}
+.sectionTrabalhos #byDesenvolvimento .trab1{
+    grid-column: a;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/plana01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab2{
+    grid-area: b;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/plana02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab3{
+    grid-area: c;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/avalia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab4{
+    grid-area: d;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/insista.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab5{
+    grid-area: e;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/bathica.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab6{
+    grid-area: f;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/avante.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab7{
+    grid-area: g;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/codeRunner02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesenvolvimento .trab8{
+    grid-area: h;
+    background-image: url("../../Imagens/TRABS/desenvolvimento/codeRunner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* TRABALHO DESIGN */
+.sectionTrabalhos #byDesign .trab1{
+    grid-column: a;
+    background-image: url("../../Imagens/TRABS/design/infor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesign .trab2{
+    grid-area: b;
+    background-image: url("../../Imagens/TRABS/design/infor01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesign .trab3{
+    grid-area: c;
+    background-image: url("../../Imagens/TRABS/design/logoOutBit2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesign .trab4{
+    grid-area: d;
+    background-image: url("../../Imagens/TRABS/design/sertoes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesign .trab5{
+    grid-area: e;
+    background-image: url("../../Imagens/TRABS/design/infor.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byDesign .trab6{
+    grid-area: f;
+    background-image: url("../../Imagens/TRABS/design/simoia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* TRABALHO MANUNTENÇÃO */
+.sectionTrabalhos #byManuntencao .trabGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+    grid-template-areas: "a a b" "c d d";
+    margin: 40px 0;
+}
+.sectionTrabalhos #byManuntencao .trab1{
+    grid-column: a;
+    background-image: url("../../Imagens/TRABS/suporte/wp1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byManuntencao .trab2{
+    grid-area: b;
+    background-image: url("../../Imagens/TRABS/suporte/wp2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byManuntencao .trab3{
+    grid-area: c;
+    background-image: url("../../Imagens/TRABS/suporte/wp3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionTrabalhos #byManuntencao .trab4{
+    grid-area: d;
+    background-image: url("../../Imagens/TRABS/suporte/wp4.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sectionHabilidade{
+    height: 100%;
+}
+.sectionHabilidade .conteudoHabilidade{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "a b";
+    grid-gap: 20px;
+    margin: 50px 0;
+    max-height: 100%;
+}
+.sectionHabilidade .conteudoHabilidade nav{
+    grid-area: a;
+}
+.sectionHabilidade .conteudoHabilidade nav ul{
+    display: flex;
+    height: 100%;   
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sectionHabilidade .conteudoHabilidade nav ul li{
+    list-style: none;
+}
+.sectionHabilidade .conteudoHabilidade nav ul li a h6{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #6a67ef;
+    font-size: 18px;
+    font-family: futuraBK;
+    font-weight: bolder;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.06),
+    -5px -5px 8px 0 rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+.sectionHabilidade .conteudoHabilidade nav ul li a h6:hover{
+    background: transparent;
+    transition: 0.25s;
+    box-shadow: none;
+    color: #0030b5;
+}
+.sectionHabilidade .conteudoHabilidade #contRel{
+    grid-area: b;
+    height: 100%;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b" "c c";
+    grid-gap: 25px;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea .neumorphism{
+    width: 100%;
+    height: 10em;
+    background:transparent;
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.05),
+    -12px -12px 14px 0 rgba(255, 255, 255, 0.955);
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent{
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "a b";
+    align-items: center;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #circle{
+    grid-area: a;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    border: 10px solid #6a67ef;
+    font-size: 40px;
+    color: gray;
+    font-family: futuraBK;
+    font-weight: bolder;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #progressos{
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #progressos h4{
+    color: gray;
+    font-size: 18px;
+    font-family: futuraBK;
+    font-weight: bolder;
+    line-height: 0.5;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #progressos progress{
+    appearance: none; 
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #progressos progress[value]::-webkit-progress-bar {
+    background-color: transparent;
+    box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px 0 rgba(255, 255, 255, 0.955);
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #percent #progressos progress[value]::-webkit-progress-value{
+    background-color: #6a67ef;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #typo{
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+}
+#jsSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#phpSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+#phpSv i{
+    background: url("../../Imagens/SVG/phpIcon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100px;
+    height: 100px;
+}
+#javaSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aiSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+#aiSv i{
+    background: url("../../Imagens/SVG/aiIcon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100px;
+    height: 100px;
+}
+#psSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+#psSv i{
+    background: url("../../Imagens/SVG/psIcon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 100px;
+    height: 100px;
+}
+#nodeSv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos{
+    grid-area: c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos #habilidadesRel{   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    width: 90%;
+}
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos #habilidadesRel div{ 
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+    /* background: #fffbfb;    */
+}   
+.sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos #habilidadesRel h6{   
+    padding: 0px 20px;
+    margin: 0;
+    color: gray;
+    font-size: 18px;
+    font-family: futuraBK;
+    font-weight: bolder;
+}
+.sectionContatos #conteudoGeralContato{
+    margin: 80px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.sectionContatos .contentContato{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.sectionContatos .contentContato .contato{
+    width: 15em;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.05),
+    -12px -12px 14px 0 rgba(255, 255, 255, 0.955);
+}
+.sectionContatos .contentContato .contato a{
+    color: #6a67ef;
+}
+.sectionContatos .contentContato .contato a:hover{
+    color: #0030b5;
+}
+@media (max-width: 800px){
+    header .navNormal{
+        display: none;
+    }
+    header .navCelular{
+        display: flex;
+    } 
+    header .navCelular ul{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10000;
+    }
+    header .navCelular ul a{
+        background: #f1f1f1;
+    }
+    .bannerHome div h1{
+        font-size: 5.5em;
+    }
+    .sectionSobre .contentSobre{
+        flex-direction: column;
+    }
+    .sectionSobre .contentSobre article{
+        max-width: 100%;
+    }
+    .sectionSobre .contentSobre div{
+        display: none;
+    }
+    .sectionTrabalhos nav ul{
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: center;
+    }
+    .sectionTrabalhos nav ul li{
+        list-style: none;
+        margin: 15px 0px;
+    }
+    .sectionTrabalhos nav ul li a{
+        padding: 10px;
+        margin: 20px 0;
+        color: #6a67ef;
+        border: 2px solid #6a67ef;
+        font-size: 18px;
+    }
+    .sectionTrabalhos .trabGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "a" "b" "c" "d" "e" "f"; 
+    }
+    .sectionTrabalhos #byDesenvolvimento .trabGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h";
+        margin: 40px 0;
+    }
+    .sectionTrabalhos #byManuntencao .trabGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "a" "b" "c" "d";
+        margin: 40px 0;
+    }
+    .sectionHabilidade .conteudoHabilidade{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: "a" "b";
+    }
+    .sectionHabilidade .conteudoHabilidade nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .sectionHabilidade .conteudoHabilidade #contRel .gridArea{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-areas: "b" "a" "c";
+        grid-gap: 25px;
+    }
+    .sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos{
+        height: 100%;
+        align-items: center;
+    }
+    .sectionHabilidade .conteudoHabilidade #contRel .gridArea #cursos #habilidadesRel{   
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .contentContato{
+        flex-direction: column;
+    }
+    .contentContato .contato{
+        margin: 20px 0;
+    }
+}
